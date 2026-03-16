@@ -1,0 +1,43 @@
+### macOS / system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### OneDrive / cloud sync cruft
+*.tmp
+*.lnk
+*.icloud
+~$*
+
+### Node / web tooling (present or future)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+dist/
+build/
+coverage/
+
+### Editors / IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+### Logs
+logs/
+*.log
+*.log.*
+
+### Misc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
