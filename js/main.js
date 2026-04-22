@@ -167,6 +167,36 @@ function initHeroYTPlayer() {
 }
 
 /**
+ * Residence card image sliders
+ */
+function initVillaSliders() {
+  document.querySelectorAll('[data-villa-slider], [data-villa-carousel]').forEach(slider => {
+    const image = slider.querySelector('img');
+    const button = slider.querySelector('.villa-row__arrow');
+    const carouselId = slider.dataset.villaCarousel;
+    const configSlides = carouselId && window.BBV_VILLA_CAROUSELS ? window.BBV_VILLA_CAROUSELS[carouselId] : null;
+    const inlineImages = (slider.dataset.sliderImages || '').split('|').filter(Boolean);
+    const inlineAlts = (slider.dataset.sliderAlts || '').split('|');
+    const slides = configSlides || inlineImages.map((src, index) => ({
+      src,
+      alt: inlineAlts[index] || inlineAlts[0] || '',
+    }));
+
+    if (!image || !button || slides.length < 2) return;
+
+    let currentIndex = Math.max(0, slides.findIndex(slide => slide.src === image.getAttribute('src')));
+    image.src = slides[currentIndex].src;
+    image.alt = slides[currentIndex].alt || image.alt;
+
+    button.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      image.src = slides[currentIndex].src;
+      image.alt = slides[currentIndex].alt || image.alt;
+    });
+  });
+}
+
+/**
  * Initialize Everything
  */
 document.addEventListener('DOMContentLoaded', async () => {
@@ -180,6 +210,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Initialise YouTube background video (index.html only)
   initHeroYTPlayer();
+  initVillaSliders();
 
   /* ─────────────────────────────────────────────
      SMOOTH SCROLL: In-page anchors

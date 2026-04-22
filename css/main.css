@@ -1363,21 +1363,27 @@ button {
   white-space: nowrap;
 }
 
-.villas-tabs__link svg {
+.villas-tabs__link svg,
+.villas-tabs__link img {
   width: 16px;
   height: 16px;
-  stroke: currentColor;
-  fill: none;
   flex-shrink: 0;
   opacity: 0.6;
   transition: opacity var(--transition-fast);
+  object-fit: contain;
+}
+
+.villas-tabs__link svg {
+  stroke: currentColor;
+  fill: none;
 }
 
 .villas-tabs__link:hover {
   color: var(--color-primary-dark);
 }
 
-.villas-tabs__link:hover svg {
+.villas-tabs__link:hover svg,
+.villas-tabs__link:hover img {
   opacity: 1;
 }
 
@@ -1386,8 +1392,12 @@ button {
   border-bottom-color: var(--color-secondary);
 }
 
-.villas-tabs__link.active svg {
+.villas-tabs__link.active svg,
+.villas-tabs__link.active img {
   opacity: 1;
+}
+
+.villas-tabs__link.active svg {
   stroke: var(--color-secondary);
 }
 

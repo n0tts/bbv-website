@@ -1,12 +1,71 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
   <meta name="description"
-    content="Browse our gallery of stunning photos from Borneo Beach Villas &amp; Suites – beachfront villas, private pools, sea views, and tropical landscapes in Karambunai Peninsula, Sabah." />
-  <title>Gallery | Borneo Beach Villas &amp; Suites</title>
+    content="Browse the photo gallery of Borneo Beach Villas &amp; Suites with beachfront views, villa interiors, tropical scenery, private pools, and sea-facing stays in Sabah." />
+  <title>Gallery | Borneo Beach Villas &amp; Suites Sabah</title>
+  <link rel="canonical" href="https://www.borneobeachvillas.com/gallery.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <meta name="theme-color" content="#0f4c5c" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Borneo Beach Villas &amp; Suites" />
+  <meta property="og:title" content="Gallery | Borneo Beach Villas &amp; Suites Sabah" />
+  <meta property="og:description"
+    content="Take a visual tour through beachfront villas, sea views, tropical gardens, and private interiors at Borneo Beach Villas &amp; Suites." />
+  <meta property="og:url" content="https://www.borneobeachvillas.com/gallery.html" />
+  <meta property="og:image" content="https://www.borneobeachvillas.com/gallery/borneo-beach-villas-living-hall.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Interior living hall at Borneo Beach Villas and Suites" />
+  <meta property="og:locale" content="en_MY" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery | Borneo Beach Villas &amp; Suites Sabah" />
+  <meta name="twitter:description"
+    content="Take a visual tour through beachfront villas, sea views, tropical gardens, and private interiors at Borneo Beach Villas &amp; Suites." />
+  <meta name="twitter:image" content="https://www.borneobeachvillas.com/gallery/borneo-beach-villas-living-hall.jpg" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://www.borneobeachvillas.com/gallery.html#webpage",
+          "url": "https://www.borneobeachvillas.com/gallery.html",
+          "name": "Gallery",
+          "description": "Photo gallery for Borneo Beach Villas & Suites in Sabah.",
+          "isPartOf": {
+            "@id": "https://www.borneobeachvillas.com/#website"
+          },
+          "about": {
+            "@id": "https://www.borneobeachvillas.com/#lodging"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.borneobeachvillas.com/gallery.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.borneobeachvillas.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Gallery",
+              "item": "https://www.borneobeachvillas.com/gallery.html"
+            }
+          ]
+        }
+      ]
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/main.css" />
@@ -44,8 +103,9 @@
           <h2 class="section-title" id="gallery-title">Life at the Shore</h2>
           <p class="gallery-section__intro">
             Every photo tells a story of sun, sea, and stillness. Follow us at
-            <a href="https://www.instagram.com/borneobeachvillasuite/" class="gallery-section__handle"
-              target="_blank" rel="noopener noreferrer" aria-label="Follow Borneo Beach Villa Suite on Instagram">@borneobeachvillasuite</a>
+            <a href="https://www.instagram.com/borneobeachvillasuite/" class="gallery-section__handle" target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Borneo Beach Villa Suite on Instagram">@borneobeachvillasuite</a>
             for daily moments from our little corner of Borneo.
           </p>
         </div>
@@ -67,8 +127,8 @@
             </svg>
           </div>
           <p class="gallery-instagram-cta__text">See more moments on Instagram</p>
-          <a href="https://www.instagram.com/borneobeachvillasuite/" class="btn btn--primary"
-            target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/borneobeachvillasuite/" class="btn btn--primary" target="_blank"
+            rel="noopener noreferrer">
             Follow @borneobeachvillasuite
           </a>
         </div>
@@ -79,29 +139,26 @@
   </main>
 
   <!-- ===================== LIGHTBOX ===================== -->
-  <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true"
-    aria-label="Photo viewer" hidden>
+  <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
     <button class="gallery-lightbox__close" id="lightbox-close" aria-label="Close photo viewer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" width="24" height="24" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" width="24" height="24" aria-hidden="true">
         <line x1="18" y1="6" x2="6" y2="18" />
         <line x1="6" y1="6" x2="18" y2="18" />
       </svg>
     </button>
-    <button class="gallery-lightbox__nav gallery-lightbox__prev" id="lightbox-prev"
-      aria-label="Previous photo">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+    <button class="gallery-lightbox__nav gallery-lightbox__prev" id="lightbox-prev" aria-label="Previous photo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
         <polyline points="15 18 9 12 15 6" />
       </svg>
     </button>
     <div class="gallery-lightbox__stage" id="lightbox-stage">
       <img src="" alt="" id="lightbox-img" class="gallery-lightbox__img" />
     </div>
-    <button class="gallery-lightbox__nav gallery-lightbox__next" id="lightbox-next"
-      aria-label="Next photo">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+    <button class="gallery-lightbox__nav gallery-lightbox__next" id="lightbox-next" aria-label="Next photo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
         <polyline points="9 18 15 12 9 6" />
       </svg>
     </button>
@@ -114,53 +171,52 @@
   <script src="js/main.js"></script>
 
   <script>
-    /* ── Gallery data ───────────────────────────────────────── */
+    /* â”€â”€ Gallery data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     const photos = [
-      { src: 'gallery/arial-view-borneo-beach.jpg',      alt: 'Aerial view of Borneo Beach Villa' },
-      { src: 'gallery/arial-view-facing-land.jpeg',      alt: 'Aerial view facing inland over the peninsula' },
-      { src: 'gallery/arial-view.jpeg',                  alt: 'Aerial view of the resort and coastline' },
-      { src: 'gallery/back-villa.jpg',                   alt: 'Back exterior of the villa' },
-      { src: 'gallery/balcony-facing-sea.jpeg',          alt: 'Private balcony with unobstructed sea view' },
-      { src: 'gallery/bath-bathub-type02.jpeg',          alt: 'Freestanding bathtub in suite bathroom' },
-      { src: 'gallery/bathroom-tub-side.jpeg',           alt: 'Side view of the elegant bathroom tub' },
-      { src: 'gallery/bathroom-tub.jpeg',                alt: 'Luxury bathroom with freestanding bathtub' },
-      { src: 'gallery/bathtub.jpeg',                     alt: 'Standalone bathtub in the villa suite' },
-      { src: 'gallery/bathtub.jpg',                      alt: 'Elegant bathtub with resort ambiance' },
-      { src: 'gallery/beach-side.jpeg',                  alt: 'Villa beach side nestled among tropical greenery' },
-      { src: 'gallery/beach-view.jpg',                   alt: 'Pristine beachfront view from the villa' },
-      { src: 'gallery/beach-villa.jpg',                  alt: 'Beach villa exterior overlooking the sea' },
-      { src: 'gallery/bed-decor.jpeg',                   alt: 'Bedroom with refined decorative accents' },
-      { src: 'gallery/bed-sideview-outside.jpeg',        alt: 'Bedroom side view with access to outdoor terrace' },
-      { src: 'gallery/borneo-beach-villas-dining.jpg',   alt: 'Dining area at Borneo Beach Villas' },
+      { src: 'gallery/arial-view-borneo-beach.jpg', alt: 'Aerial view of Borneo Beach Villa' },
+      { src: 'gallery/arial-view-facing-land.jpeg', alt: 'Aerial view facing inland over the peninsula' },
+      { src: 'gallery/arial-view.jpeg', alt: 'Aerial view of the resort and coastline' },
+      { src: 'gallery/beach-scene.jpg', alt: 'Beach scene at Borneo Beach Villa' },
+      { src: 'gallery/beach-scene-palm.jpg', alt: 'Beach scene with palm tree at Borneo Beach Villa' },
+      { src: 'gallery/palm-tree.jpg', alt: 'Tropical palm tree by the beachfront' },
+      { src: 'gallery/sunset.jpeg', alt: 'Breathtaking sunset at Borneo Beach Villa' },
+      { src: 'gallery/sunset-view.jpg', alt: 'Golden hour sunset over the South China Sea' },
+      { src: 'gallery/sunset-view.jpeg', alt: 'Sunset view from the villa terrace' },
+      { src: 'gallery/sunset-by-pool.jpeg', alt: 'Golden sunset reflected in the pool' },
+      { src: 'gallery/borneo-beach-villas-seaview.jpg', alt: 'Panoramic sea view from the villa' },
+      { src: 'gallery/beach-view.jpg', alt: 'Pristine beachfront view from the villa' },
+      { src: 'gallery/beach-side.jpeg', alt: 'Villa beach side nestled among tropical greenery' },
+      { src: 'gallery/balcony-facing-sea.jpeg', alt: 'Private balcony with unobstructed sea view' },
+      { src: 'gallery/front-villa.jpg', alt: 'Front exterior of the villa entrance' },
+      { src: 'gallery/beach-villa.jpg', alt: 'Beach villa exterior overlooking the sea' },
+      { src: 'gallery/villa-beach-side.jpeg', alt: 'Villa viewed from the beach side' },
+      { src: 'gallery/back-villa.jpg', alt: 'Back exterior of the villa' },
+      { src: 'gallery/pool-facing-beach.jpeg', alt: 'Private pool facing the beach' },
+      { src: 'gallery/pool-wide-angle.jpeg', alt: 'Wide-angle view of the villa swimming pool' },
+      { src: 'gallery/pool.jpeg', alt: 'Serene private pool surrounded by nature' },
+      { src: 'gallery/swimming-pool.jpeg', alt: 'Inviting swimming pool area' },
       { src: 'gallery/borneo-beach-villas-living-hall.jpg', alt: 'Spacious living hall interior' },
-      { src: 'gallery/borneo-beach-villas-seaview.jpg',  alt: 'Panoramic sea view from the villa' },
-      { src: 'gallery/dining-area.jpeg',                 alt: 'Outdoor dining area with natural surroundings' },
-      { src: 'gallery/front-villa.jpg',                  alt: 'Front exterior of the villa entrance' },
-      { src: 'gallery/kitchen.jpeg',                     alt: 'Well-appointed villa kitchen' },
-      { src: 'gallery/living-room-wideview.jpeg',        alt: 'Wide-angle view of the open-plan living room' },
-      { src: 'gallery/living-room.jpeg',                 alt: 'Stylish living room interior' },
-      { src: 'gallery/nexus-resort-restaurant.jpg',      alt: 'Nexus Resort restaurant dining experience nearby' },
-      { src: 'gallery/palm-tree.jpg',                    alt: 'Tropical palm tree by the beachfront' },
-      { src: 'gallery/pool-facing-beach.jpeg',           alt: 'Private pool facing the beach' },
-      { src: 'gallery/pool-wide-angle.jpeg',             alt: 'Wide-angle view of the villa swimming pool' },
-      { src: 'gallery/pool.jpeg',                        alt: 'Serene private pool surrounded by nature' },
-      { src: 'gallery/room-first-floor-view.jpeg',       alt: 'First floor room with outdoor view' },
-      { src: 'gallery/room-twin-bed.jpeg',               alt: 'Comfortable twin bedroom' },
-      { src: 'gallery/sunset-by-pool.jpeg',              alt: 'Golden sunset reflected in the pool' },
-      { src: 'gallery/sunset-view.jpeg',                 alt: 'Sunset view from the villa terrace' },
-      { src: 'gallery/sunset-view.jpg',                  alt: 'Golden hour sunset over the South China Sea' },
-      { src: 'gallery/sunset.jpeg',                      alt: 'Breathtaking sunset at Borneo Beach Villa' },
-      { src: 'gallery/swimming-pool.jpeg',               alt: 'Inviting swimming pool area' },
-      { src: 'gallery/villa-beach-side.jpeg',            alt: 'Villa viewed from the beach side' },
+      { src: 'gallery/living-room-wideview.jpeg', alt: 'Wide-angle view of the open-plan living room' },
+      { src: 'gallery/living-room.jpeg', alt: 'Stylish living room interior' },
+      { src: 'gallery/dining-area.jpeg', alt: 'Outdoor dining area with natural surroundings' },
+      { src: 'gallery/kitchen.jpeg', alt: 'Well-appointed villa kitchen' },
+      { src: 'gallery/room-twin-bed.jpeg', alt: 'Comfortable twin bedroom' },
+      { src: 'gallery/bed-decor.jpeg', alt: 'Bedroom with refined decorative accents' },
+      { src: 'gallery/bed-sideview-outside.jpeg', alt: 'Bedroom side view with access to outdoor terrace' },
+      { src: 'gallery/room-first-floor-view.jpeg', alt: 'First floor room with outdoor view' },
+      { src: 'gallery/bath-bathub-type02.jpeg', alt: 'Freestanding bathtub in suite bathroom' },
+      { src: 'gallery/bathroom-tub-side.jpeg', alt: 'Side view of the elegant bathroom tub' },
+      { src: 'gallery/bathroom-tub.jpeg', alt: 'Luxury bathroom with freestanding bathtub' },
+      { src: 'gallery/bathtub.jpeg', alt: 'Standalone bathtub in the villa suite' },
     ];
 
-    /* ── State ─────────────────────────────────────────────── */
+    /* â”€â”€ State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     const PER_PAGE = 12;
     let currentPage = 1;
     let lightboxIndex = 0;
     const totalPages = Math.ceil(photos.length / PER_PAGE);
 
-    /* ── Grid rendering ─────────────────────────────────────── */
+    /* â”€â”€ Grid rendering â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     function renderGallery(page) {
       const grid = document.getElementById('gallery-grid');
       const start = (page - 1) * PER_PAGE;
@@ -193,7 +249,7 @@
       });
     }
 
-    /* ── Pagination ─────────────────────────────────────────── */
+    /* â”€â”€ Pagination â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     function renderPagination() {
       const nav = document.getElementById('gallery-pagination');
       let html = `<button class="gallery-pagination__btn" id="btn-prev"
@@ -239,7 +295,7 @@
       document.getElementById('gallery-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    /* ── Lightbox ───────────────────────────────────────────── */
+    /* â”€â”€ Lightbox â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     const lightbox = document.getElementById('gallery-lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCounter = document.getElementById('lightbox-counter');
@@ -285,7 +341,7 @@
       if (e.key === 'ArrowRight') navigateLightbox(1);
     });
 
-    /* ── Init ───────────────────────────────────────────────── */
+    /* â”€â”€ Init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     renderGallery(1);
     renderPagination();
   </script>
