@@ -45,7 +45,8 @@ function initNavigation() {
   const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath) {
+    const normalizedHref = href === '/' ? '/' : href.replace(/^\/+/, '').replace(/\.html$/, '');
+    if (normalizedHref === currentPath) {
       link.setAttribute('aria-current', 'page');
     }
   });
@@ -210,8 +211,8 @@ function initVillaSliders() {
  */
 document.addEventListener('DOMContentLoaded', async () => {
   // Load global components
-  const headerLoaded = await loadComponent('header-placeholder', 'components/header.html');
-  const footerLoaded = await loadComponent('footer-placeholder', 'components/footer.html');
+  const headerLoaded = await loadComponent('header-placeholder', '/components/header.html');
+  const footerLoaded = await loadComponent('footer-placeholder', '/components/footer.html');
 
   if (headerLoaded) {
     initNavigation();
