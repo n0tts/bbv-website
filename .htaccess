@@ -2,6 +2,9 @@ Options -MultiViews
 
 RewriteEngine On
 
+# Serve pretty page URLs before Apache can treat matching asset folders as directories.
+RewriteRule ^gallery/?$ gallery.html [L]
+
 # Redirect /index.html to /
 RewriteCond %{THE_REQUEST} /index\.html [NC]
 RewriteRule ^ / [L,R=301]

@@ -32,7 +32,8 @@ function initNavigation() {
   if (!header) return;
 
   // 1. Highlight active link
-  let currentPath = window.location.pathname.split('/').pop();
+  const normalizedPath = window.location.pathname.replace(/\/+$/, '') || '/';
+  let currentPath = normalizedPath.split('/').pop();
   // Normalize: empty or index.html becomes /
   if (currentPath === '' || currentPath === 'index.html') {
     currentPath = '/';
