@@ -1,3 +1,5 @@
+Options -MultiViews
+
 RewriteEngine On
 
 # Redirect /index.html to /
@@ -9,6 +11,6 @@ RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1 [L,R=301]
 
 # Map /page to /page.html internally
-RewriteCond %{REQUEST_FILENAME} !-d
+# We check for the .html file first, even if a directory exists with the same name
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [L]
