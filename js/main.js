@@ -32,7 +32,15 @@ function initNavigation() {
   if (!header) return;
 
   // 1. Highlight active link
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  let currentPath = window.location.pathname.split('/').pop();
+  // Normalize: empty or index.html becomes /
+  if (currentPath === '' || currentPath === 'index.html') {
+    currentPath = '/';
+  } else {
+    // Remove extension if present
+    currentPath = currentPath.replace('.html', '');
+  }
+
   const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
