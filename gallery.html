@@ -18,7 +18,8 @@
   <meta property="og:description"
     content="Take a visual tour through beachfront villas, sea views, tropical gardens, and private interiors at Borneo Beach Villas &amp; Suites." />
   <meta property="og:url" content="https://www.borneobeachvillas.com/gallery" />
-  <meta property="og:image" content="https://www.borneobeachvillas.com/photo-gallery/borneo-beach-villas-living-hall.jpg" />
+  <meta property="og:image"
+    content="https://www.borneobeachvillas.com/photo-gallery/borneo-beach-villas-living-hall.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Interior living hall at Borneo Beach Villas and Suites" />
@@ -27,7 +28,8 @@
   <meta name="twitter:title" content="Gallery | Borneo Beach Villas &amp; Suites Sabah" />
   <meta name="twitter:description"
     content="Take a visual tour through beachfront villas, sea views, tropical gardens, and private interiors at Borneo Beach Villas &amp; Suites." />
-  <meta name="twitter:image" content="https://www.borneobeachvillas.com/photo-gallery/borneo-beach-villas-living-hall.jpg" />
+  <meta name="twitter:image"
+    content="https://www.borneobeachvillas.com/photo-gallery/borneo-beach-villas-living-hall.jpg" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -171,7 +173,7 @@
   <script src="/js/main.js"></script>
 
   <script>
-    /* â”€â”€ Gallery data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* Gallery data */
     const photos = [
       { src: '/photo-gallery/arial-view-borneo-beach.jpg', alt: 'Aerial view of Borneo Beach Villa' },
       { src: '/photo-gallery/arial-view-facing-land.jpeg', alt: 'Aerial view facing inland over the peninsula' },
@@ -179,10 +181,13 @@
       { src: '/photo-gallery/beach-scene.jpg', alt: 'Beach scene at Borneo Beach Villa' },
       { src: '/photo-gallery/beach-scene-palm.jpg', alt: 'Beach scene with palm tree at Borneo Beach Villa' },
       { src: '/photo-gallery/palm-tree.jpg', alt: 'Tropical palm tree by the beachfront' },
+      { src: '/photo-gallery/resort-garden-landscape.jpeg', alt: 'Lush tropical landscape across the resort garden' },
+      { src: '/photo-gallery/tropical-garden-tree-sunlight.jpeg', alt: 'Sun-drenched tropical tree in the villa garden' },
       { src: '/photo-gallery/sunset.jpeg', alt: 'Breathtaking sunset at Borneo Beach Villa' },
       { src: '/photo-gallery/sunset-view.jpg', alt: 'Golden hour sunset over the South China Sea' },
       { src: '/photo-gallery/sunset-view.jpeg', alt: 'Sunset view from the villa terrace' },
       { src: '/photo-gallery/sunset-by-pool.jpeg', alt: 'Golden sunset reflected in the pool' },
+      { src: '/photo-gallery/sunset-pool-villa.jpeg', alt: 'Vibrant sunset over the private pool and villa' },
       { src: '/photo-gallery/borneo-beach-villas-seaview.jpg', alt: 'Panoramic sea view from the villa' },
       { src: '/photo-gallery/beach-view.jpg', alt: 'Pristine beachfront view from the villa' },
       { src: '/photo-gallery/beach-side.jpeg', alt: 'Villa beach side nestled among tropical greenery' },
@@ -190,7 +195,11 @@
       { src: '/photo-gallery/front-villa.jpg', alt: 'Front exterior of the villa entrance' },
       { src: '/photo-gallery/beach-villa.jpg', alt: 'Beach villa exterior overlooking the sea' },
       { src: '/photo-gallery/villa-beach-side.jpeg', alt: 'Villa viewed from the beach side' },
+      { src: '/photo-gallery/beachfront-villa-hill-view.jpeg', alt: 'Beachfront villa view with lush green hill backdrop' },
       { src: '/photo-gallery/back-villa.jpg', alt: 'Back exterior of the villa' },
+      { src: '/photo-gallery/resort-garden-gazebo.jpeg', alt: 'Traditional garden gazebo surrounded by greenery' },
+      { src: '/photo-gallery/villa-exterior-flowering-trees.jpeg', alt: 'Villa exterior with beautiful flowering Plumeria trees' },
+      { src: '/photo-gallery/villa-exterior-sunset-golden-hour.jpeg', alt: 'Golden hour glow on the beachfront villa exterior' },
       { src: '/photo-gallery/pool-facing-beach.jpeg', alt: 'Private pool facing the beach' },
       { src: '/photo-gallery/pool-wide-angle.jpeg', alt: 'Wide-angle view of the villa swimming pool' },
       { src: '/photo-gallery/pool.jpeg', alt: 'Serene private pool surrounded by nature' },
@@ -210,13 +219,13 @@
       { src: '/photo-gallery/bathtub.jpeg', alt: 'Standalone bathtub in the villa suite' },
     ];
 
-    /* â”€â”€ State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /*  State  */
     const PER_PAGE = 12;
     let currentPage = 1;
     let lightboxIndex = 0;
     const totalPages = Math.ceil(photos.length / PER_PAGE);
 
-    /* â”€â”€ Grid rendering â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* Grid rendering  */
     function renderGallery(page) {
       const grid = document.getElementById('gallery-grid');
       const start = (page - 1) * PER_PAGE;
@@ -249,7 +258,7 @@
       });
     }
 
-    /* â”€â”€ Pagination â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /*  Pagination  */
     function renderPagination() {
       const nav = document.getElementById('gallery-pagination');
       let html = `<button class="gallery-pagination__btn" id="btn-prev"
@@ -295,7 +304,7 @@
       document.getElementById('gallery-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    /* â”€â”€ Lightbox â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* Lightbox  */
     const lightbox = document.getElementById('gallery-lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCounter = document.getElementById('lightbox-counter');
@@ -341,7 +350,7 @@
       if (e.key === 'ArrowRight') navigateLightbox(1);
     });
 
-    /* â”€â”€ Init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    /* Init  */
     renderGallery(1);
     renderPagination();
   </script>
