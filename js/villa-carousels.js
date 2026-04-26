@@ -77,7 +77,7 @@ window.BBV_VILLA_CAROUSELS = {
   ],
   'villa-2br-seafront': [
     {
-      src: 'images/villas-carousel/pool-villa-seaview.jpg',
+      src: 'images/villas-carousel/2br-pool-villa-seafront.jpg',
       alt: '2 Bedroom Pool Villa Sea Front exterior with private garden',
     },
     {
