@@ -22,6 +22,16 @@ async function loadComponent(id, path) {
 }
 
 /**
+ * Update Footer Year: Sets the current year in the footer copyright notice
+ */
+function updateFooterYear() {
+  const yearSpan = document.getElementById('current-year');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+}
+
+/**
  * Navigation & Header Logic: Encapsulated to run after header loads
  */
 function initNavigation() {
@@ -213,6 +223,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Load global components
   const headerLoaded = await loadComponent('header-placeholder', '/components/header.html');
   const footerLoaded = await loadComponent('footer-placeholder', '/components/footer.html');
+  if (footerLoaded) {
+    updateFooterYear();
+  }
 
   if (headerLoaded) {
     initNavigation();
