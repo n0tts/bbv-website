@@ -1181,6 +1181,15 @@ button {
   margin-block: var(--sp-5);
 }
 
+.info-highlight--important {
+  background-color: #fbf6f0;
+  border-left-color: #d97736;
+}
+
+.info-highlight--important strong {
+  color: #c2591b;
+}
+
 .info-highlight p {
   margin-bottom: 0;
   font-size: var(--text-sm);

@@ -18,3 +18,29 @@ RewriteRule ^ /%1 [L,R=301]
 # We check for the .html file first, even if a directory exists with the same name
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [L]
+
+# ----------------------------------------------------------------------
+# Cache Control & LiteSpeed Cache Optimization
+# ----------------------------------------------------------------------
+
+# 1. Force browsers and LiteSpeed to revalidate HTML files on every visit
+<FilesMatch "\.(html|htm|xml|sitemap)$">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </IfModule>
+    # Instruct the LiteSpeed server-side cache engine not to cache HTML
+    <IfModule LiteSpeed>
+        RewriteEngine On
+        RewriteRule .* - [E=Cache-Control:no-cache]
+    </IfModule>
+</FilesMatch>
+
+# 2. Allow long-term caching for static assets (images, CSS, JS) to keep site fast
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico|svg|webp|woff|woff2)$">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "max-age=31536000, public"
+    </IfModule>
+</FilesMatch>
+
